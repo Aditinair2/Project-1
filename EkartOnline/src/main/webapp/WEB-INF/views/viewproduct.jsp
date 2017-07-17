@@ -19,7 +19,7 @@
 
 					<c:if test="${pageContext.request.userPrincipal.name != 'Admin'}">
 						<p>
-							<%-- <a href="<c:url value="${url}" />" class="btn btn-primary">Back</a> --%>
+							
 							<c:if
 								test="${pageContext.request.userPrincipal.name  != 'Admin'}">
 								<a
@@ -27,15 +27,9 @@
 									class="btn btn-primary"><span
 									class="glyphicon glyphicon-shopping-cart"></span>Add to cart </a>
 									
-									<%-- <a
-									href="<c:url value="/user/cart/view/${cart.cartId}"/>"
-									class="btn btn-primary"><span
-									class="glyphicon glyphicon-shopping-cart"></span>View Cart </a> --%>
 									
 
-								<%-- <a href="<spring:url value="/user/cart/view/${cart.cartId}"/>"
-									class="btn btn-primary"><span
-									class="glyphicon glyphicon-hand-right"></span>View Cart</a> --%>
+								
 							</c:if>
 						</p>
 					</c:if>

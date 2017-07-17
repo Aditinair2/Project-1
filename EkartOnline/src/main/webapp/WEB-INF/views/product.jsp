@@ -4,6 +4,7 @@
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@page isELIgnored="false"%>
+<%@include file="/WEB-INF/views/Header.jsp"%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -84,21 +85,10 @@
 
 					<div class="form-group">
 						<div class="controls docs-input-sizes">
-							<%-- <c:if test="${!empty product.name}">
-
-								<button type="submit" class="btn btn-template-main pull-left">
-									<i class="fa fa-user-md"></i> Edit Product
-								</button>
-							</c:if> --%>
+							
 							<c:if test="${empty product.name}">
 
-								<!-- <button type="submit" class="btn btn-template-main pull-left">
-									<i class="fa fa-user-md"></i> Add Product
-								</button> -->
-
-								<%-- <a href="<spring:url value="/user/cart/view/${user.cartId}"/>"
-												class="btn btn-primary"><span
-												class="glyphicon glyphicon-hand-right"></span>View Cart</a> --%>
+								
 							</c:if>
 						</div>
 					</div>
@@ -128,7 +118,7 @@
 						<th>Product Name</th>
 						<th>Product Price</th>
 						<th>Category</th>
-						<th>Supplier</th>
+						<th>Supplier</th><br><br>
 						<th>Action</th>
 
 					</tr>
@@ -144,17 +134,16 @@
 
 						<td>${p.supplier.name}</td>
 						<td>
-							<%-- <td>${product.id}</td>
-						<td>${product.name}</td>
-						<td>${product.description}</td> --%> <c:url
-								value="/product/edit/${p.id}" var="edit" />
+						<c:url value="/product/edit/${p.id}" var="edit" />
 						<td><a href="${edit }">Edit</a></td>
 						<c:url value="/product/remove/${p.id}" var="remove" />
 						<td><a href="${remove }">Delete</a></td>
-
 						<c:url value="/all/product/viewproduct/${p.id}" var="view" />
-						<td><a href="${view }">View</a></td>
+						<td><a href="${view }">View</a>
+						</td>
+						
 					</tr>
+				
 
 
 

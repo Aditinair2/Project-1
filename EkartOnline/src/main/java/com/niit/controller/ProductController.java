@@ -139,7 +139,7 @@ public class ProductController {
 		 */
 
 		MultipartFile itemImage = product.getItemImage();
-		path = Paths.get("/Users/aditinair/git/Project_Ekart/EkartOnline/src/main/webapp/resources/images/" + product.getId() + ".png");
+		path = Paths.get("/Users/aditinair/Desktop/Project-1/EkartOnline/src/main/webapp/resources/images/" + product.getId() + ".png");
 		System.out.println("hjhkjh");
 
 		if (itemImage != null && !itemImage.isEmpty()) {
@@ -163,7 +163,7 @@ public class ProductController {
 			productDAO.deleteProductById(id);
 			model.addAttribute("message", "Successfully deleted");
 
-			path = Paths.get("/Users/aditinair/Desktop/codes/Updated_project-master 2/EkartOnline/src/main/webapp/resources/images" + id + ".png");
+			path = Paths.get("/Users/aditinair/Desktop/Project-1/EkartOnline/src/main/webapp/resources/images" + id + ".png");
 
 			if (Files.exists(path)) {
 				try {
